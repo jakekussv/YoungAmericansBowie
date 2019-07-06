@@ -1,0 +1,102 @@
+
+.index-hero{
+
+  height: 670px;
+
+  .index-hero-right{
+    background-image:url('../images/David-Bowie-Young-Americansbanner.jpg');
+    background-repeat:no-repeat;
+    background-position: center right;
+    background-size:contain;
+    height:100%;
+
+
+  }
+
+  @media screen and (max-width: 768px) {
+    .index-hero-right {
+      margin-top: 25px;
+      background-position: center;
+
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .index-hero-right {
+     display:none;
+    }
+  }
+
+
+  .index-hero-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    padding-left: 50px;
+
+    @media screen and (max-width: 768px) {
+      padding-left:0;
+    }
+  }
+
+}
+
+.index-description{
+
+  border-top:1px solid #FFF;
+  border-bottom:1px solid #FFF;
+
+  .sample-song-list{
+    padding:0;
+  }
+
+  .index-description-content {
+    text-align: center;
+    padding-top:50px;
+    padding-bottom:50px;
+
+
+    h2 {
+      font-size:27px;
+    }
+
+    ul {
+      list-style-type: none;
+
+      li {
+        color: #FFF;
+        font-size: 20px;
+      }
+    }
+
+    p {
+      font-size: 40px;
+    }
+  }
+}
+
+
+.index-secondary-hero{
+
+  div {
+    background-image: url(../images/IndexHero.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 667px;
+    background-attachment: fixed;
+
+    @media screen and (max-width: 500px) {
+      background-position: center center;
+      background-size:cover;
+      background-attachment:initial;
+    }
+  }
+}
+
+.index-reviews {
+  border-top:1px solid #FFF;
+  border-bottom:1px solid #FFF;
+  padding-bottom:50px;
+}

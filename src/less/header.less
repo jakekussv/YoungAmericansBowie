@@ -1,0 +1,65 @@
+@import "variables";
+nav.main-nav{
+  border-bottom: 1px solid white;
+  //background-image:url('../images/YoungAmericansLogo.png');
+  //background-position:15px;
+  //background-repeat:no-repeat;
+  //background-size: 176px 87px;
+  height: 115px;
+  padding: 0 0 30px 30px;
+
+  .logo-link{
+    display:block;
+    height:87px;
+    width:176px;
+    background-image:url('../images/YoungAmericansLogo.png');
+    background-repeat:no-repeat;
+    background-size: 176px 87px;
+   margin-top:12px;
+
+  }
+
+  .mobile-nav-toggle{
+    display:none;
+    font-size:26px;
+    position:relative;
+    top:40px;
+    left:-20px;
+    cursor:pointer;
+
+    @media screen and (max-width: 768px) {
+      display:block;
+    }
+  }
+
+
+  ul.nav-list{
+    list-style-type:none;
+    display:flex;
+    margin-top:48px;
+
+    @media screen and (max-width: 768px) {
+      display:none;
+    }
+
+    li{
+      .navListItem();
+      display:inline-block;
+      padding-right:15px;
+
+     a{
+       color:@young-americans-red;
+       font-weight:bold;
+
+       &.current{
+         color:#FFF;
+       }
+
+       &:hover{
+         text-decoration:none;
+         opacity:0.8;
+       }
+     }
+    }
+  }
+}

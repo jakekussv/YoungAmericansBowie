@@ -1,0 +1,73 @@
+.band-hero{
+  background-repeat:no-repeat;
+  height:667px;
+  background-position: center;
+  background-size: contain;
+  background-image:url("../images/TheBand.jpg");
+}
+
+.band-members {
+  padding-bottom:30px;
+  .band-members-description {
+
+    .band-member-image-wrapper{
+      position:relative;
+      &:hover {
+
+        .image-caption-wrapper{
+          visibility:visible;
+        }
+        .image-caption {
+          opacity: 1.0;
+        }
+      }
+
+    }
+
+    .image-caption-wrapper{
+      position: absolute;
+      top: auto;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 18px;
+      background: rgba(0, 0, 0,0.7);
+      max-height: 100%;
+      box-sizing: border-box;
+      overflow-y: auto;
+      font-size: 12px;
+      visibility:hidden;
+
+
+      .image-caption {
+
+        -webkit-transition: opacity 0.1s; /* Safari and Chrome */
+        -moz-transition: opacity 0.1s; /* Firefox 4 */
+        -ms-transition: opacity 0.1s; /* MSIE */
+        -o-transition: opacity 0.1s; /* Opera */
+        transition: opacity 0.1s;
+        -webkit-transition-timing-function: linear; /* Safari and Chrome */
+        transition-timing-function: linear;
+
+
+      }
+
+    }
+
+    .band-members-descriptions-inner {
+      max-width: 700px;
+      margin: 0 auto;
+
+    }
+
+    .band-member-text {
+      margin-top: 15px;
+
+      p{
+        @media screen and (max-width: 768px) {
+          padding:0 30px 0 30px;
+        }
+      }
+    }
+  }
+}
