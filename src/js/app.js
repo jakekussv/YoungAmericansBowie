@@ -3,6 +3,8 @@
  */
 
 $(document).ready(function (){
+    var source = $("#gigs-template").html();
+    var template = Handlebars.compile(source);
 
     var $siteCanvas =  $("#site-canvas");
     $("#scroll-to-top-link").click(function(){
@@ -46,5 +48,14 @@ $(document).ready(function (){
         lazyLoad:'ondemand',
         prevArrow:'<button type="button" class="slick-prev"><i class="fa fa-arrow-left"></i></button>',
         nextArrow:'<button type="button" class="slick-next"><i class="fa fa-arrow-right"></i></button>'
-    })
+    });
+
+    if(currentPath === '/gigs.html'){
+        $.ajax({
+            url: "/data/gigData.json?_=" + new Date().getTime()
+        })
+        .done(function( data ) {
+            $("#gigs").append(template(data));
+        });
+    }
 });
