@@ -24,12 +24,12 @@
             <section class="gigs-content page-section row">
                 <div class="gig-info">
                     <h2 class="red">{{this.name}}</h2>
-                    <p class="white">{{this.date}}</p>
-                    <p class="white">{{this.time}}</p>
-                    <a class="block facebook-link" target="_blank" href="{{{this.facebookEvent.href}}}">{{this.facebookEvent.name}}</a>
                     <p class="white">{{this.location}}
                         <a class="block map-link" target="_blank" href="{{{googleMapsUrl}}}">Map</a>
                     </p>
+                    <p class="white">{{this.date}}</p>
+                    <p class="white">{{this.time}}</p>
+                    <a class="block facebook-link" target="_blank" href="{{{this.facebookEvent.href}}}">{{this.facebookEvent.name}}</a>
                     <p class="white">{{this.description}}</p>
                     {{#if this.ticketLink}}
                         <a class="buy-ticket-link" href="{{{this.ticketLink}}}" target="_blank">Tickets</a>

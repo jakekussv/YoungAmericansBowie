@@ -3,9 +3,6 @@
  */
 
 $(document).ready(function (){
-    var source = $("#gigs-template").html();
-    var template = Handlebars.compile(source);
-
     var $siteCanvas =  $("#site-canvas");
     $("#scroll-to-top-link").click(function(){
         $('html,body').animate({ scrollTop: 0 }, 'slow');
@@ -51,6 +48,8 @@ $(document).ready(function (){
     });
 
     if(currentPath === '/gigs.html'){
+        var source = $("#gigs-template").html();
+        var template = Handlebars.compile(source);
         $.ajax({
             url: "/data/gigData.json?_=" + new Date().getTime()
         })
